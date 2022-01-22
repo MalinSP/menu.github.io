@@ -68,11 +68,14 @@ a {
 .menu {
   display: grid;
   place-items: center;
-  margin-top: 2rem;
+  padding: 5rem 0;
 }
 .title {
   margin-bottom: 2rem;
   color: #094067;
+}
+.title h2 {
+  letter-spacing: 0.03rem;
 }
 .underline {
   width: 5rem;
@@ -84,16 +87,24 @@ a {
 }
 .btn-container {
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
 }
 .filter-btn {
-  background: #3da9fc;
-  color: #fffffe;
+  background: transparent;
+  color: #094067;
   font-weight: 500;
-  border: transparent;
-  padding: 0.25rem 0.75rem;
-  margin: 0.2rem;
+  border: 1px solid #90b4ce;
+  padding: 0.35rem 0.9rem;
+  margin: 0.4rem;
   letter-spacing: 0.05rem;
   border-radius: 0.35rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.filter-btn:hover {
+  background: #3da9fc;
+  color: #fffffe;
 }
 .section-center {
   width: 90vw;
@@ -118,6 +129,37 @@ a {
   justify-content: space-between;
   border-bottom: 0.5px dotted gray;
 }
+.item-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+.price {
+  color: #3da9fc;
+}
 .item-text {
   margin-top: 1rem;
+  color: #5f6c7b;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
+  .photo {
+    height: 175px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .photo {
+    height: 150px;
+  }
 }
