@@ -86,9 +86,10 @@ a {
   margin-top: 0.2rem;
 }
 .btn-container {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 2.2rem;
 }
 .filter-btn {
   background: transparent;
@@ -161,5 +162,11 @@ a {
   }
   .photo {
     height: 150px;
+  }
+}
+@media screen and (min-width: 550px) {
+  .btn-container {
+    display: flex;
+    flex-direction: row;
   }
 }
